@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabajo Práctico</title>
+    </head>
+    <body>
+        <header>
+            <h1> Compilado de Programas</h1>
+        </header>
+
+        <section>
+            <article id="programa1">
+                <h2> Programa 1</h2>
+                <h3> Factura de Hospital. </h3>
+                <form method="post" action="#">
+                    <p>Nombre del Paciente: <input type="text" id="nombrePaciente" placeholder="Nombre" required=""> </p>
+                    <p>Costo por Consulta: <input type="text" id="costoConsulta" placeholder="Consulta" required=""></p>
+                    <p>Costo de Hospitalizacion por Dia: <input type="text" id="costoDiaHospital" placeholder="Hospitalizacion por Dia"></p>
+                    <p>Costo de Medicamentos: <input type="text" id="costoMedicamentos"placeholder="Costo de Medicamentos"></p>
+                    <p>Costos Varios (analisis, cirugías, etc.): <input type="text" id="costosVarios" placeholder="Varios"></p>
+                    <p>Numero de Dias en el Hospital: <input type="text" id="numeroDiasHospital" placeholder="Dias en el Hospital"></p>
+                    <label> Deduccion de Seguro de Gastos: </label>
+                        <p><input type="text" id="deduccionSeguro" placeholder="Seguro de Gastos"></p>
+                    <p><input type="submit" value="enviar" onclick="programa1()">
+                </form>
+            </article>
+            <article id="programa2">
+                <h2> Programa 2</h2>
+                <h3> Pago a vendedor.</h3>
+                <form method="post" action="#programa2">
+                    <p>Nombre del Vendedor: <input type="text" id="sellerName" placeholder="Vendedor" required=""></p>
+                    <p>Sueldo Base: <input type="text" id="sueldoBase" placeholder="Sueldo Base" required="" pattern="[0.0-9.9]+"></p>
+                    <p>Valor de las 3 ventas: </p>
+                        <p>Venta 1: <input type="text" id="venta1" placeholder="Valor 1" required=""></p>
+                        <p>Venta 2: <input type="text" id="venta2" placeholder="Valor 2" required=""></p>
+                        <p>Venta 3: <input type="text" id="venta3" placeholder="Valor 3" required=""></p>
+                    <input type="submit" value="calcular" onclick="programa2()">
+                </form>
+            </article>
+            <article id="programa3">
+                <h2> Programa 3 </h2>
+                <h3> IMC </h3>
+                <form action="#programa3">
+                    <p>Nombre: <input type="text" id="userName" placeholder="Nombre"></p>
+                    <label>Peso: <input type="text" id="peso" placeholder="Kilos" required=""></label>
+                    <label>Altura: <input type="text" id="altura" placeholder="Metros" required=""></label>
+                    <input type="submit" value="calcular" onclick="programa3(document.getElementById('peso').value, 
+                                                                            document.getElementById('altura').value, 
+                                                                            document.getElementById('userName').value)">
+                </form>
+            </article>
+            <article id="programa4">
+                <h2> Programa 4</h2>
+                <h3>Convertidor de unidades.</h3>
+                <form method="post" action="#programa4">
+                    <p>
+                        Cantidad a convertir: <input type="text" id="unidades" placeholder="unidades" required="" pattern="[0.0-9.9]+">
+                        <select name="unidades" id="unitOrigin">
+                            <option value="metro">Metros</option>
+                            <option value="centimetro">centimetros</option>
+                            <option value="pie">pie</option>
+                            <option value="yarda">yarda</option>
+                        </select>
+                    </p>
+                    <p>
+                        Convertir a:
+                        <select name="unidades" id="unitDestinity">
+                            <option value="metro">Metros</option>
+                            <option value="centimetro">centimetros</option>
+                            <option value="pie">pie</option>
+                            <option value="yarda">yarda</option>
+                        </select>
+                    </p>
+                    <input type="submit" value="calcular" onclick="programa4(document.getElementById('unidades').value, 
+                                                                            document.getElementById('unitOrigin').value, 
+                                                                            document.getElementById('unitDestinity').value)">
+                </form>
+            </article>
+            <article id="programa5">
+                <h2>Programa 5</h2>
+                <h3> Promedio.</h3>
+                <form action="#programa5">
+                    <input type="text" id="nameAlumno" required="" placeholder="Nombre del Alumno">
+                    <input type="submit" value="Calcular Promedio" onclick="programa5()">
+                </form>
+            </article>
+            <article id="programa6">
+                <h2>Programa 6</h2>
+                <h3>Numero de Intentos Ciclo While.</h3>
+                <input type="submit", value="comenzar Ciclo" onclick="programa6()">
+            </article>
+            <article id="programa7">
+                <h2>Programa 7</h2>
+                <h3>Calcular el factorial de un Número.</h3>
+                <form action="#programa7">
+                    <input type="number" id="numero" required="" placeholder="numero" min="1">
+                    <input type="submit" value="calcular" onclick="programa7(document.getElementById('numero').value)">
+                </form>
+            </article>
+            <article id="programa8">
+                <h2>Programa 8</h2>
+                <h3>Programa que imprime forma triangular.</h3>
+                <form action="#programa8">
+                    <input type="number" id="pisos" min="1" required="" placeholder="Número de Pisos">
+                    <input type="submit" value="pintar" onclick="programa8(document.getElementById('pisos').value)">
+                </form>
+            </article>
+            <articule id="programa9">
+                <h2>Programa 9 </h2>
+                <h3>Piramide Horizontal.</h3>
+                <input type="submit" value="pintar" onclick="programa9()">
+            </articule>
+            <article id="programa10">
+                <h2> Programa 10</h2>
+                <h3> Medio Arbol.</h3>
+                <form action="#programa10">
+                    <input type="number" id="ciclos" required="" min="1" placeholder="Número de Ciclos">
+                    <input type="submit" value="Pintar Arbol" onclick="programa10(document.getElementById('ciclos').value)">
+                </form>
+            </article>
+        </section>
+
+        <footer>
+            <script src="JS/funciones.js"></script>
+        </footer>
+    </body>
+</html>
